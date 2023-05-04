@@ -1,0 +1,131 @@
+<mat-toolbar style="justify-content: space-between;">
+  <button mat-raised-button color="primary">Home</button>
+  <button mat-raised-button>Jobs</button>
+  <button mat-raised-button>Results</button>
+  <button mat-raised-button>Admit Cards</button>
+  <button mat-raised-button>New</button>
+  <mat-icon>g_translate</mat-icon>
+</mat-toolbar>
+
+
+
+<mat-card  >
+
+  <!-- RESULTS  -->
+
+  <mat-card class="resultcardcontainer" appearance="outlined">
+    <mat-card-title style="font-size: 20px;font-weight:bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:green; ">RESULTS</mat-card-title>
+    <mat-divider ></mat-divider>
+    <mat-card class="resultlist" *ngFor="let result of results" >
+      <mat-card-content class="resultcardcontent">
+
+        <!-- title  -->
+        <div style="display:flex; justify-content:space-between; ">
+          <mat-card-title>{{result.title}}</mat-card-title>
+          <div>
+            <mat-icon style="font-size: medium;" align="end">trending_down</mat-icon>
+            <mat-icon style="font-size: medium;" align="end">bar_chart</mat-icon>
+            <mat-icon style="font-size: medium;" align="end">fiber_new</mat-icon>
+          </div>
+        </div>
+
+        <!-- subtitle buttons and icons  -->
+        <div style="display:flex; justify-content:space-between;  ">
+          <mat-card-subtitle>{{result.subtitle}}</mat-card-subtitle>
+          <div>
+
+          <mat-icon style="font-size: medium;" align="end" *ngif="bookmark">bookmark</mat-icon>
+          <mat-icon style="font-size: medium;" align="end" *ngIf="!bookmark">bookmark_border</mat-icon>
+          <mat-icon style="font-size: medium;" align="end">calendar_today</mat-icon>
+          <mat-icon style="font-size: medium;" align="end" *ngIf="favorite">favorite_border</mat-icon>
+          <mat-icon style="font-size: medium;" align="end" *ngIf="!favorite">favorite</mat-icon>
+          </div>
+        </div>
+      </mat-card-content>
+
+    </mat-card>
+    <!-- Show more button  -->
+    <mat-card-actions style="display:flex; justify-content:center; ">
+      <button mat-raised-button>Show More</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+  <!-- ADMIT CARDS  -->
+  <mat-card class="admitcardcontainer" appearance="outlined">
+    <mat-card-title style="font-size: 20px;font-weight:bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:orange; ">ADMIT CARDS</mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card class="admitcardlist" *ngFor="let admitcard of admitcards" appearance="outlined" >
+      <mat-card-content class="admitcardcontent">
+
+        <!-- title  -->
+        <div style="display:flex; justify-content:space-between; ">
+          <mat-card-title>{{admitcard.title}}</mat-card-title>
+          <div>
+            <mat-icon style="font-size: medium;" align="end">trending_down</mat-icon>
+            <mat-icon style="font-size: medium;" align="end">bar_chart</mat-icon>
+            <mat-icon style="font-size: medium;" align="end">fiber_new</mat-icon>
+          </div>
+        </div>
+        <!-- subtitle buttons and icons  -->
+        <div style="display:flex; justify-content:space-between;  ">
+          <mat-card-subtitle>{{admitcard.subtitle}}</mat-card-subtitle>
+          <div>
+
+          <mat-icon style="font-size: medium;" align="end" *ngif="bookmark">bookmark</mat-icon>
+          <mat-icon style="font-size: medium;" align="end" *ngIf="!bookmark">bookmark_border</mat-icon>
+          <mat-icon style="font-size: medium;" align="end">calendar_today</mat-icon>
+          <mat-icon style="font-size: medium;" align="end" *ngIf="favorite">favorite_border</mat-icon>
+          <mat-icon style="font-size: medium;" align="end" *ngIf="!favorite">favorite</mat-icon>
+          </div>
+        </div>
+      </mat-card-content>
+
+    </mat-card>
+    <!-- Show more button  -->
+    <mat-card-actions style="display:flex; justify-content:center; ">
+      <button mat-raised-button>Show More</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+
+  <mat-card class="jobcardcontainer" appearance="outlined">
+    <mat-card-title style="font-size: 20px;font-weight:bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;color:blue ">JOBS</mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card class="joblist" *ngFor="let job of jobs"  >
+      <mat-card-content class="jobcardcontent">
+
+        <!-- title  -->
+        <div style="display:flex; justify-content:space-between; ">
+          <mat-card-title>{{job.title}}</mat-card-title>
+          <div>
+            <mat-icon style="font-size: medium;" align="end">trending_up</mat-icon>
+            <mat-icon style="font-size: medium;" align="end">bar_chart</mat-icon>
+            <mat-icon style="font-size: medium;" align="end">fiber_new</mat-icon>
+          </div>
+        </div>
+        <!-- subtitle buttons and icons  -->
+        <div style="display:flex; justify-content:space-between;  ">
+          <mat-card-subtitle>{{job.subtitle}}</mat-card-subtitle>
+          <div>
+
+          <mat-icon style="font-size: medium;" align="end" *ngif="bookmark">bookmark</mat-icon>
+          <mat-icon style="font-size: medium;" align="end" *ngIf="!bookmark">bookmark_border</mat-icon>
+          <mat-icon style="font-size: medium;" align="end">calendar_today</mat-icon>
+          <mat-icon style="font-size: medium;" align="end" *ngIf="favorite">favorite_border</mat-icon>
+          <mat-icon style="font-size: medium;" align="end" *ngIf="!favorite">favorite</mat-icon>
+          </div>
+        </div>
+      </mat-card-content>
+
+    </mat-card>
+    <!-- Show more button  -->
+    <mat-card-actions style="display:flex; justify-content:center; ">
+      <button mat-raised-button>Show More</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+
+</mat-card>
