@@ -14,6 +14,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
+import { ChartsComponent } from './components/charts/charts.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,10 +23,12 @@ import {MatTableModule} from '@angular/material/table';
     AppComponent,
     ResultsComponent,
     LatestjobsComponent,
-    JobsInfoComponent
+    JobsInfoComponent,
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MatTableModule,
     MatCardModule,
     MatToolbarModule,
