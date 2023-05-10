@@ -16,6 +16,10 @@ import {MatListModule} from '@angular/material/list';
 import {MatTableModule} from '@angular/material/table';
 import { ChartsComponent } from './components/charts/charts.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TablesComponent } from './components/tables/tables.component';
+import { DataModelsComponent } from './components/data-models/data-models.component';
+import { Items } from './components/data-models/datas';
+import { DatamodelinfoComponent } from './components/data-models/datamodelinfo/datamodelinfo.component';
 
 
 @NgModule({
@@ -24,7 +28,10 @@ import { HttpClientModule } from '@angular/common/http';
     ResultsComponent,
     LatestjobsComponent,
     JobsInfoComponent,
-    ChartsComponent
+    ChartsComponent,
+    TablesComponent,
+    DataModelsComponent,
+    DatamodelinfoComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [Items], // declare data models in order to get accessible
   bootstrap: [AppComponent]
 })
 export class AppModule { }

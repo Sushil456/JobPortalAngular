@@ -1,0 +1,24 @@
+export class Items{
+  items1:any=[
+    {
+      id:1,
+      title:'Title1',
+      description:'Description1'
+    },
+    {
+      id:2,
+      title:'Title2',
+      description:'Description2'
+    },
+    {
+      id:3,
+      title:'Title3',
+      description:'Description3'
+    },
+    {
+      id:4,
+      title:'Title4',
+      description:'Description4'
+    }
+  ]
+}

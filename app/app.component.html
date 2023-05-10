@@ -11,7 +11,6 @@
 
 <mat-card  >
 
-  <!-- RESULTS  -->
 
   <mat-card class="resultcardcontainer" appearance="outlined">
     <mat-card-title style="font-size: 20px;font-weight:bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:green; ">RESULTS</mat-card-title>
@@ -19,7 +18,7 @@
     <mat-card class="resultlist" *ngFor="let result of results" >
       <mat-card-content class="resultcardcontent">
 
-        <!-- title  -->
+
         <div style="display:flex; justify-content:space-between; ">
           <mat-card-title>{{result.title}}</mat-card-title>
           <div>
@@ -29,7 +28,6 @@
           </div>
         </div>
 
-        <!-- subtitle buttons and icons  -->
         <div style="display:flex; justify-content:space-between;  ">
           <mat-card-subtitle>{{result.subtitle}}</mat-card-subtitle>
           <div>
@@ -44,21 +42,19 @@
       </mat-card-content>
 
     </mat-card>
-    <!-- Show more button  -->
+
     <mat-card-actions style="display:flex; justify-content:center; ">
       <button mat-raised-button>Show More</button>
     </mat-card-actions>
   </mat-card>
 
 
-  <!-- ADMIT CARDS  -->
   <mat-card class="admitcardcontainer" appearance="outlined">
     <mat-card-title style="font-size: 20px;font-weight:bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:orange; ">ADMIT CARDS</mat-card-title>
     <mat-divider></mat-divider>
     <mat-card class="admitcardlist" *ngFor="let admitcard of admitcards" appearance="outlined" >
       <mat-card-content class="admitcardcontent">
 
-        <!-- title  -->
         <div style="display:flex; justify-content:space-between; ">
           <mat-card-title>{{admitcard.title}}</mat-card-title>
           <div>
@@ -67,7 +63,6 @@
             <mat-icon style="font-size: medium;" align="end">fiber_new</mat-icon>
           </div>
         </div>
-        <!-- subtitle buttons and icons  -->
         <div style="display:flex; justify-content:space-between;  ">
           <mat-card-subtitle>{{admitcard.subtitle}}</mat-card-subtitle>
           <div>
@@ -82,7 +77,6 @@
       </mat-card-content>
 
     </mat-card>
-    <!-- Show more button  -->
     <mat-card-actions style="display:flex; justify-content:center; ">
       <button mat-raised-button>Show More</button>
     </mat-card-actions>
@@ -96,7 +90,6 @@
     <mat-card class="joblist" *ngFor="let job of jobs"  >
       <mat-card-content class="jobcardcontent">
 
-        <!-- title  -->
         <div style="display:flex; justify-content:space-between; ">
           <mat-card-title>{{job.title}}</mat-card-title>
           <div>
@@ -105,7 +98,6 @@
             <mat-icon style="font-size: medium;" align="end">fiber_new</mat-icon>
           </div>
         </div>
-        <!-- subtitle buttons and icons  -->
         <div style="display:flex; justify-content:space-between;  ">
           <mat-card-subtitle>{{job.subtitle}}</mat-card-subtitle>
           <div>
@@ -120,7 +112,6 @@
       </mat-card-content>
 
     </mat-card>
-    <!-- Show more button  -->
     <mat-card-actions style="display:flex; justify-content:center; ">
       <button mat-raised-button>Show More</button>
     </mat-card-actions>
@@ -133,3 +124,5 @@
 <mat-card appearance="outlined">
   <app-charts></app-charts>
 </mat-card>
+
+<router-outlet></router-outlet>
